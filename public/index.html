@@ -3,8 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>ikbc官方网站</title>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	
+	<!-- 网页头部 -->
+	<div id="header"></div>
+
+	<!-- 轮播图 -->
+	<div id="carousel">
+		<ul class="content">
+			<li>
+				<a href="javascript:;">
+					<img src="resource/carousel01.png">
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 网页尾部 -->
+	<div id="footer"></div>
+	<!-- jQuery使用了1.11.3版本，唯一对老IE8支持 -->
+	<!-- 生产环境换用1.11.3.min.js 体积更小，便于下载 -->
+	<script src="js/jquery-1.11.3.js"></script>
+	<script>
+		// 使用jQuery引入公用的网页头尾
+		$("#header").load("header.html");
+		$("#footer").load("footer.html");
+	</script>
 </body>
 </html>

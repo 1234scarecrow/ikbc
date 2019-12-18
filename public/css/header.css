@@ -1,7 +1,9 @@
+/* css reset */
 *{
     margin: 0;
     padding: 0;
 }
+/* 网页头整体样式及定位 */
 header{
     width: 100%;
     height: 70px;
@@ -12,9 +14,9 @@ header>div{
     height: 70px;
     margin: 0 auto;
 }
+/* 头部项目使用ul布局 */
 header>div>ul{
     list-style: none;
-    
 }
 header>div>ul>li{
     width: 10%;
@@ -34,6 +36,7 @@ header>div a{
 header>div a:hover{
     color:#919191;
 }
+/* 搜索框布局 */
 header input{
     display: inline-block;
     float: right;

@@ -1,27 +1,57 @@
+/* cssreset */
 *{
     margin: 0;
     padding: 0;
 }
+/* 网页脚整体样式及定位 */
 footer{
     width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
-footer>div{
-    display: flex;
-    /* 改写弹性布局了 */
+/* 使用弹性布局给联系方式和客服做布局 */
+/* 先做好弹性容器内ul和div内的布局 */
+footer ul{
+    text-align: center;
 }
-footer>span{
+footer ul>li{
+    height: 50px;
+    line-height: 50px;
+}
+footer span{
     color: #86868b;
 }
 footer ul{
+    height: 100px;
     list-style: none;
+    margin-top: 50px;
 }
 footer ul>li{
     font-size: 15px;
-    margin-bottom: 10px;
     color: #86868b;
 }
 footer>div>div{
-
+    height: 100px;
+    text-align: left;
+    margin-top: 50px;
+}
+footer>div>div>img{
+    width: 26px;
+    vertical-align: middle;
+}
+footer>div>div>h1{
+    font-size: 16px;
+    color: rgb(68, 68, 68);
+    margin-top: 10px;
+}
+/* footer>div>div>div{
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+} */
+/* 弹性布局 */
+footer>div{
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
 }
