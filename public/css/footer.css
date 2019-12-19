@@ -5,7 +5,9 @@
 }
 /* 网页脚整体样式及定位 */
 footer{
+    clear: both;
     width: 1200px;
+    height: 300px;
     margin: 0 auto;
     text-align: center;
 }

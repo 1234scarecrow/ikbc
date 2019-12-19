@@ -24,6 +24,13 @@ header>div>ul>li{
     text-align: center;
     line-height: 70px;
 }
+header>div>ul>li:first-child{
+    height: 70px;
+}
+header .header_a{
+    display: inline-block;
+    height: 0px;
+}
 header>div img{
     height: 30px;
     margin: 20px 0;
