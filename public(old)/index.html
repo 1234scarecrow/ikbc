@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>ikbc官方网站</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<!-- 网页头部 -->
+	<div id="header"></div>
+
+	<!-- 轮播图 -->
+	<div id="carousel">
+		<!-- 轮播图容器，用ul横向布局 -->
+		<ul class="content">
+			<!-- 前四个li为正常轮播图 -->
+			<li>
+				<a href="javascript:;">
+					<img src="images/resource/carousel01.png">
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<img src="images/resource/carousel01.png">
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<img src="images/resource/carousel01.png">
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					<img src="images/resource/carousel01.png">
+				</a>
+			</li>
+			<!-- 后一个li为衔接用 -->
+			<li>
+				<a href="javascript:;">
+					<img src="images/resource/carousel01.png">
+				</a>
+			</li>
+		</ul>
+		<!-- 左右按钮 -->
+		<img src="images/icons/btn-left.png" class="btn-left">
+		<img src="images/icons/btn-right.png" class="btn-right">
+		<!-- 轮播图控制点 -->
+		<ul id="ul-idxs">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+	<!-- 网页尾部 -->
+	<div id="footer"></div>
+	<!-- jQuery使用了1.11.3版本，唯一对老IE8支持 -->
+	<!-- 生产环境换用1.11.3.min.js 体积更小，便于下载 -->
+	<script src="js/jquery-1.11.3.js"></script>
+	<!-- 定义moveTo函数，调用可以切换轮播图 -->
+	<script>
+		// 使用jQuery引入公用的网页头尾
+		$("#header").load("header.html");
+		$("#footer").load("footer.html");
+
+		// 轮播图的js
+		var i=0;			// 当前正在显示的图片序号，从0开始
+		var LIWIDTH=1200;	// 设置li宽度为内容宽度
+		var DURATION=500;	// 设置轮播动画播放时长
+		var LICOUNT=4;		// 设置轮播图的个数
+		// 查找显示图片的ul
+		var content=document.getElementsByClassName("content")[0];
+		// 轮播控制圆点ul
+		var ulIdx=document.getElementById("ul-idxs");
+		// 轮播图控制点
+		var lis=ulIdx.children;
+		// 函数：从当前位置移动到任意位置
+		function moveTo(to){
+			// 如果用户没有传入要跳到第几张图，就默认跳到当前图的下一张
+			if(to==undefined){
+				to=i+1;
+			}
+			if(i==0){
+				if(to>i){
+					content.className="transition";
+				}else{
+					content.className="";
+					content.style.marginLeft=-LICOUNT*LIWIDTH+"px";
+					setTimeout(function(){
+						moveTo(LICOUNT-1);
+					},100);
+					return;
+				}
+			}
+			i=to;	// 先将表示第几张图片的变量i变为目标位置
+					// 再用i计算content的marginleft距离
+			// console.log(-i*LIWIDTH+"px");
+			// console.log(content);
+			content.style.marginLeft=-i*LIWIDTH+"px";
+			// 先删除所有小圆点的class
+			for(var li of lis){
+				li.className="";
+			}
+			// 再给当前小圆点添加class active
+			if(i==LICOUNT){
+				i=0;
+				// 当切换动画播放完后，才清掉transition将content切到初始位置
+				setTimeout(function(){
+					content.className="";
+					content.style.marginLeft=0;
+				},DURATION)
+			}
+			// 再给当前位置的小圆点添加class active
+			lis[i].className="active";
+		}
+	</script>
+	<!-- 实现两个按钮的功能 -->
+	<script>
+		var btnLeft=document.getElementsByClassName("btn-left");
+		var btnRight=document.getElementsByClassName("btn-right");
+		var canClick=true;
+		function move(n){
+			if(canClick){
+				moveTo(i+n);
+				canClick=false;
+				setTimeout(function(){
+					canClick=true;
+				},DURATION+100);
+			}
+		}
+		btnRight[0].onclick=function(){
+			move(1);
+		}
+		btnLeft[0].onclick=function(){
+			move(-1);
+		}
+	</script>
+	<!-- 实现自动轮播，光标移入暂停播放，移出继续播放 -->
+	<script>
+		var interval=3000;
+		var timer=setInterval(function(){
+			moveTo();
+		},3000);
+		var carousel=document.getElementById("carousel");
+		carousel.onmouseover=function(){
+			clearInterval(timer);
+		}
+		carousel.onmouseout=function(){
+			timer=setInterval(function(){
+				moveTo();
+			},3000);
+		}
+	</script>
+</body>
+</html>
