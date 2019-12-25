@@ -31,13 +31,13 @@ header li a{
     color: #00000096;
     /* font-family: "微软雅黑";
     font-size: 16px; */
-    font: bold 16px "微软雅黑";
+    font: 500 16px "微软雅黑";
     margin-top: 15px;
 }
 /* 搜索框布局 */
 header input{
     display: inline-block;
-    margin: 25px 2%;
+    margin: 30px 2%;
     float: right;
     outline: none;
     height: 20px;
