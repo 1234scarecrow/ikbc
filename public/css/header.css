@@ -47,8 +47,10 @@ header input{
     text-indent: 5%;
 }
 /* 键盘选项下拉菜单 */
+/* 参考https://blog.csdn.net/holly_Z_P_F/article/details/90549364 */
 ul ul{
     list-style-type: none;
+    height: 100px;
 }
 .pullDown{
     width: 120px;

@@ -1,0 +1,112 @@
+body,ul,input,p,dl,dt,dd,h1{margin: 0;padding: 0;}
+body{min-width: 755px;color: #6c6c6c;font-size: 12px;}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+/*下拉菜单*/
+.right .u100{position: relative;}
+.right #u101{
+    width: 95px;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    background-color: #fff;
+    border: thin;
+    border-color: #eee;
+}
+.right #u101 a{
+    display: block;
+    padding: 0 10px;
+    line-height: 28px;
+    color: #6c6c6c;
+}
+.right #u101 a:hover{
+    background: #f5f5f5;
+}
+/*用户信息栏*/
+#top{
+    height: 30px;
+    line-height: 30px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #eee;
+ 
+}
+#top ul{
+    margin: 0 20px;
+}
+#top li{
+    float: left;
+    padding: 0px 5px 0px 0px;
+}
+#top .line{
+    color: #ccc;
+}
+#top .top_nav{
+    max-width: 1220px;
+    margin: 0 auto;
+}
+.right li{
+    cursor: pointer;
+}
+.right li span{
+    padding: 0px 9px;
+}
+/*头部*/
+#header{
+    width: 1220px;
+    margin: 0 auto;
+    padding-top: 20px;
+    overflow: hidden;
+}
+#header a{
+    width: 240px;
+    display: block;
+}
+#header #search{
+    width: 500px;
+    margin-top: 15px;
+}
+#header #search input{
+    width: 416px;
+    height: 30px;
+    border: 3px solid #e4393c;
+}
+#header #search .search_btn{
+    width: 78px;
+    height: 36px;
+    background: #e4393c;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+#header #search p{
+    color: #999;
+    font-size: 12px;
+    margin-top: 5px;
+}
+#header #info{
+    margin-top: 18px;
+    margin-left: 20px;
+}
+#header #info input{
+    height: 32px;
+    border: 1px solid #e3e3e3;
+    background-color: #f7f7f7;
+    color: #666;
+    padding: 0 10px;
+    margin-left: 12px;
+}
