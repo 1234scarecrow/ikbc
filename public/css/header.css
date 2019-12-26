@@ -14,19 +14,19 @@ header>ul{
     margin: 0 auto;
     list-style: none;
 }
-header li{
+header>ul>li{
     width: 10%;
 }
-header li:first-child{
+header>ul>li:first-child{
     float: left;
     margin-top: 20px; 
 }
-header li:not(:first-child){
+header>ul>li:not(:first-child){
     float: right;
     line-height: 85px;
 }
 
-header li a{
+header>ul>li a{
     text-decoration: none;
     color: #00000096;
     /* font-family: "微软雅黑";
@@ -45,4 +45,17 @@ header input{
     border:1px solid #dbdbdb;
     border-radius: 5px;
     text-indent: 5%;
+}
+/* 键盘选项下拉菜单 */
+ul ul{
+    list-style-type: none;
+}
+.pullDown{
+    width: 120px;
+
+}
+.pullDown>li>a{
+    width: 120px;
+    line-height: 20px;
+    text-align: left;
 }
