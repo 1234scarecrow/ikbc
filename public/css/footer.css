@@ -7,8 +7,9 @@ footer{
     width: 1200px;
     height: 300px;
     margin: 25px auto;
-    background-color: #f6f6f6;
+    background-color: #fbfbfb;
     position: relative;
+    box-shadow: 0 0 5px #00000050;
 }
 /* 弹性布局容器样式(大) */
 .footerContent{

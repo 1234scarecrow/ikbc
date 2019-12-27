@@ -15,7 +15,7 @@
     height: 500px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 0 10px #00000050;
+    box-shadow: 0 0 5px #00000050;
 }
 /* 图所在ul */
 #ul-imgs{
@@ -96,4 +96,34 @@
 #series>.s1,#series>.s3,#series>.s5{
     margin-right: 20px;
     /* background-color: #aaa; */
+}
+#series>div{
+    position: relative;
+}
+#series>div>h2,#series>div>p{
+    position: absolute;
+}
+.s1>h2{
+    top: 200px;
+    left: 630px;
+}
+.s1>p{
+    top: 240px;
+    left: 630px;
+}
+.s4>h2{
+    top: 70px;
+    left: 630px;
+}
+.s4>p{
+    top: 120px;
+    left: 630px;
+}
+.s5>h2{
+    top: 70px;
+    left: 630px;
+}
+.s5>p{
+    top: 120px;
+    left: 630px;
 }
