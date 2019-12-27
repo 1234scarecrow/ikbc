@@ -1,0 +1,35 @@
+li{
+	list-style:none;
+}
+li span{
+	padding-left: 20px;
+	cursor: pointer;
+  background: url("../images/add.png") no-repeat center left;
+}
+li ul{/*二级ul的起始样式: 隐藏*/
+	/* display: none;  */
+	height:0px;
+	overflow:hidden;
+	transition:height .5s linear;
+}
+.open{ 
+	background: url("../images/minus.png") no-repeat center left; 
+}
+/* .open+ul{ 二级ul的展开状态 */
+	/* display: block;  */
+	/* height:108px; */
+/* } */
+/*三个ul的高:64  86  107*/
+/*三个预案*/
+/*当第一个li下的span class为open时，让span旁边的ul高变为64px*/
+li:nth-child(1)>span.open+ul{
+	height:64px;
+}
+/*当第二个li下的span class为open时，让span旁边的ul高变为86px*/
+li:nth-child(2)>span.open+ul{
+	height:86px;
+}
+/*当第三个li下的span class为open时，让span旁边的ul高变为107px*/
+li:nth-child(3)>span.open+ul{
+	height:107px;
+}
