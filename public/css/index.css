@@ -80,12 +80,14 @@
     flex-wrap: wrap;
     white-space: nowrap;    /* 文本不换行 */
     justify-content: space-between;
+    position: relative;
 }
 /* 内容 (问题:无响应式,需改进) */
 #series>div{
     height: 300px;
-    box-shadow: 0 0 10px #00000050;
+    box-shadow: 0 0 5px #00000050;
     margin-top: 20px;
+    transition: margin-top .15s;
 }
 #series>.s1,#series>.s4,#series>.s5{
     width: 830px
@@ -126,4 +128,30 @@
 .s5>p{
     top: 120px;
     left: 630px;
+}
+/* 文章视频内容模块 */
+#artical{
+    display: flex;
+    margin: 20px 0 0;
+    justify-content: space-between;
+}
+#artical>div>div{
+    width: 285px;
+    height: 176px;
+    box-shadow: 0 0 5px #00000050;
+}
+#artical>div>h2{
+    text-align: center;
+    margin-top: 5px;
+    color: #787878;
+}
+
+/* 主页元素动作 */
+#series>div{
+    /* position: absolute;l. */
+    /* top: 0;
+    transition: .25; */
+}
+#series>div:hover{
+    margin-top: 15px;
 }
