@@ -1,157 +1,166 @@
 /* css reset */
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 /* 网页主体 */
-.container{
-    width: 1200px;
-    margin: 0 auto;
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 /* 轮播图容器 */
-#banner{
-    margin-top: 25px;
-    width: 1200px;
-    height: 500px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 0 5px #00000050;
+#banner {
+  margin-top: 25px;
+  width: 1200px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 5px #00000050;
 }
 /* 图所在ul */
-#ul-imgs{
-    list-style: none;
-    width: 6000px;
-    white-space: nowrap;
-    margin-left: 0px;
+#ul-imgs {
+  list-style: none;
+  width: 6000px;
+  white-space: nowrap;
+  margin-left: 0px;
 }
-#ul-imgs img{
-    width: 1200px;
-    float: left;
+#ul-imgs img {
+  width: 1200px;
+  float: left;
 }
 /* 左右按钮 */
-#btn-left img,#btn-right img{
-    height: 60px;
-    position: absolute;
-    top: 50%;
-    margin-top:-15px;
-    cursor: pointer;
+#btn-left img,
+#btn-right img {
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  cursor: pointer;
 }
-#btn-left img{
-    left: 20px;
+#btn-left img {
+  left: 20px;
 }
-#btn-right img{
-    right: 20px;
+#btn-right img {
+  right: 20px;
 }
 /* 控制小圆点 */
-#ul-idxs{
-    width: 96px;
-    list-style: none;
-    white-space: nowrap;
-    z-index: 0;
-    position:absolute;
-    top: 100%;
-    left: 50%;
-    margin: -48px;
+#ul-idxs {
+  width: 96px;
+  list-style: none;
+  white-space: nowrap;
+  z-index: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: -48px;
 }
-#ul-idxs li{
-    margin: 0 5px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #ccc;
-    bottom: 30px;
-    float: left;
-    cursor: pointer;
+#ul-idxs li {
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ddd;
+  bottom: 30px;
+  float: left;
+  cursor: pointer;
 }
 /* js控制的活动样式 */
 /* bug: 无法切换 */
-.active{
-    background-color: #333;
+.active {
+  background-color: #333;
+  /* transition: all 3s linear; */
 }
-.transition{
-    transition: .25s;
+.transition {
+  transition: 0.25s;
 }
 
 /* 内容主体 */
 /* 产品系列详情容器 */
-#series{
-    width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    white-space: nowrap;    /* 文本不换行 */
-    justify-content: space-between;
-    position: relative;
+#series {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap; /* 文本不换行 */
+  justify-content: space-between;
+  position: relative;
 }
 /* 内容 (问题:无响应式,需改进) */
-#series>div{
-    height: 300px;
-    box-shadow: 0 0 5px #00000050;
-    margin-top: 20px;
-    transition: margin-top .15s;
+#series > div {
+  height: 300px;
+  box-shadow: 0 0 5px #00000050;
+  margin-top: 20px;
+  transition: margin-top 0.15s;
 }
-#series>.s1,#series>.s4,#series>.s5{
-    width: 830px
+#series > .s1,
+#series > .s4,
+#series > .s5 {
+  width: 830px;
 }
-#series>.s2,#series>.s3,#series>.s6{
-    width: 350px;
+#series > .s2,
+#series > .s3,
+#series > .s6 {
+  width: 350px;
 }
-#series>.s1,#series>.s3,#series>.s5{
-    margin-right: 20px;
-    /* background-color: #aaa; */
+#series > .s1,
+#series > .s3,
+#series > .s5 {
+  margin-right: 20px;
+  /* background-color: #aaa; */
 }
-#series>div{
-    position: relative;
+#series > div {
+  position: relative;
 }
-#series>div>h2,#series>div>p{
-    position: absolute;
+#series > div > h2,
+#series > div > p {
+  position: absolute;
 }
-.s1>h2{
-    top: 200px;
-    left: 630px;
+.s1 > h2 {
+  top: 200px;
+  left: 630px;
 }
-.s1>p{
-    top: 240px;
-    left: 630px;
+.s1 > p {
+  top: 240px;
+  left: 630px;
 }
-.s4>h2{
-    top: 70px;
-    left: 630px;
+.s4 > h2 {
+  top: 70px;
+  left: 630px;
 }
-.s4>p{
-    top: 120px;
-    left: 630px;
+.s4 > p {
+  top: 120px;
+  left: 630px;
 }
-.s5>h2{
-    top: 70px;
-    left: 630px;
+.s5 > h2 {
+  top: 70px;
+  left: 630px;
 }
-.s5>p{
-    top: 120px;
-    left: 630px;
+.s5 > p {
+  top: 120px;
+  left: 630px;
 }
 /* 文章视频内容模块 */
-#artical{
-    display: flex;
-    margin: 20px 0 0;
-    justify-content: space-between;
+#artical {
+  display: flex;
+  margin: 20px 0 0;
+  justify-content: space-between;
 }
-#artical>div>div{
-    width: 285px;
-    height: 176px;
-    box-shadow: 0 0 5px #00000050;
+#artical > div > div {
+  width: 285px;
+  height: 176px;
+  box-shadow: 0 0 5px #00000050;
 }
-#artical>div>h2{
-    text-align: center;
-    margin-top: 5px;
-    color: #787878;
+#artical > div > h2 {
+  text-align: center;
+  margin-top: 5px;
+  color: #787878;
 }
 
 /* 主页元素动作 */
-#series>div{
-    /* position: absolute;l. */
-    /* top: 0;
+#series > div {
+  /* position: absolute;l. */
+  /* top: 0;
     transition: .25; */
 }
-#series>div:hover{
-    margin-top: 15px;
+#series > div:hover {
+  margin-top: 15px;
 }

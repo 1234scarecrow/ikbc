@@ -1,64 +1,65 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 /* 网页尾部大布局,宽高等 */
-footer{
-    width: 1200px;
-    height: 300px;
-    margin: 25px auto;
-    background-color: #fbfbfb;
-    /* background-image: url("../images/resource/footerbg.png");
+footer {
+  width: 1200px;
+  height: 300px;
+  margin: 25px auto;
+  background-color: #fbfbfb;
+  /* background-image: url("../images/resource/footerbg.png");
     background-repeat: repeat-x; */
-    position: relative;
-    box-shadow: 0 0 5px #00000050;
+  position: relative;
+  box-shadow: 0 0 5px #00000050;
 }
 /* 弹性布局容器样式(大) */
-.footerContent{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.footerContent {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 /* 列表布局 */
-.footerContent>ul{
-    list-style: none;
-    margin-top: 67px;
-    margin-left: 120px;
+.footerContent > ul {
+  list-style: none;
+  margin-top: 67px;
+  margin-left: 120px;
 }
-.footerContent>ul>li{
-    height: 20px;
+.footerContent > ul > li {
+  height: 20px;
 }
-.footerContent>ul>li>a{
-    text-decoration: none;
-    font-size: 14px;
-    color: #333;
+.footerContent > ul > li > a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
 }
 /* 弹性布局容器样式(小) */
-.footerContent>div{
-    margin-top: 67px;
-    margin-right: 120px;
-    width: 270px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.footerContent > div {
+  margin-top: 67px;
+  margin-right: 120px;
+  width: 270px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
-.footerContent>div>div{
-    text-align: center;
+.footerContent > div > div {
+  text-align: center;
 }
-.footerContent>div p{
-    color: #333;
-    font-size: 16px;
-    margin-top: 10px;
+.footerContent > div p {
+  color: #333;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-footer h3{
-    display: block;
-    width: 400px;
-    height: 16px;
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    margin-left: -200px;
-    font-size: 12px;
-    color: #666;
+footer h3 {
+  text-align: center;
+  display: block;
+  width: 400px;
+  height: 16px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  margin-left: -200px;
+  font-size: 12px;
+  color: #666;
 }

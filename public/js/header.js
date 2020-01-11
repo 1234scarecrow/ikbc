@@ -5,7 +5,7 @@ var pullBtn=document.getElementById("pullBtn");
 pullBtn.onmouseover=function(){
     // 3. 查找要修改的元素
     var pullDown=document.getElementById("pullDown");
-    console.log(pullDown)
+    // console.log(pullDown)
     // 4. 修改元素
     pullDown.className="hidden";
     
@@ -13,7 +13,7 @@ pullBtn.onmouseover=function(){
 pullBtn.onmouseout=function(){
     // 3. 查找要修改的元素
     var pullDown=document.getElementById("pullDown");
-    console.log(pullDown)
+    // console.log(pullDown)
     // 4. 修改元素
     pullDown.className="";
     

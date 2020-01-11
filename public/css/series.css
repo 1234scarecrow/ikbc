@@ -1,0 +1,67 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  background-color: rgb(247, 247, 247);
+}
+
+/* banner部分 */
+.banner{
+  margin: 25px;
+}
+.banner>ul{
+  list-style: none;
+  width: 1200px;
+  margin: 0 auto;
+}
+.banner img{
+  width: 1200px;
+  /* opacity: 0;
+  transition: all 1s linear; */
+}
+
+/* main */
+main{
+  width: 1200px;
+  margin: 0 auto;
+  color: rgb(0,0,0,0.7);
+}
+.title{
+  margin-bottom: 20px;
+}
+.items{
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.items>div{
+  width: 590px;
+  height: 364px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.items>div>div{
+  width: 590px;
+  height: 364px;
+  background-color: #fff;
+  box-shadow: #00000055 0 0 3px;
+  transition: all .25s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.items>div>div:hover{
+  box-shadow: black 0 0 7px;
+  top: -5px;
+}
+.items img{
+  width: 500px;
+  /* position: absolute;
+  top: 20px;
+  left: 50%; */
+  margin: 20px 45px 0;
+
+}
